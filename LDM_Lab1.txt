@@ -1,6 +1,21 @@
+-- First part --
+
 Houses = (H_name VARCHAR(50), H_motto VARCHAR(50), H_animal VARCHAR(50));
 Teachers = (T_ID INT, T_firstname VARCHAR(50), T_lastname VARCHAR(50));
 Students = (S_ID INT, S_firstname VARCHAR(50), S_lastname VARCHAR(50), #H_name);
 Courses = (C_ID VARCHAR(50), C_title VARCHAR(50), #T_ID);
 takes = (#S_ID, #C_ID, grade INT);
 assigns = (#H_name, #T_ID, points INT);
+
+
+--Second part --
+
+Houses = (H_name VARCHAR(50), H_motto VARCHAR(50), H_animal VARCHAR(50));
+Courses = (C_ID VARCHAR(50), C_title VARCHAR(50));
+Teachers = (T_ID INT, T_firstname VARCHAR(50), T_field VARCHAR(50), T_lastname VARCHAR(50), #H_name);
+Students = (S_ID INT, S_firstname VARCHAR(50), S_lastname VARCHAR(50), S_gender VARCHAR(50), #H_name);
+takes = (#S_ID, #C_ID, grade INT);
+taught_by = (#C_ID, #T_ID);
+assigns = (#H_name, #T_ID, points INT);
+
+

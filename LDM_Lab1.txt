@@ -1,6 +1,6 @@
-Houses = (house_name VARCHAR(50), house_motto VARCHAR(50), house_animal VARCHAR(50));
-Teachers = (teacher_ID INT, teacher_first_name VARCHAR(50), teacher_last_name VARCHAR(50));
-Students = (students_id_ INT, students_first_name VARCHAR(50), students_last_name VARCHAR(50), #house_name);
-Courses_ = (course_ID INT, courses_title VARCHAR(50), #teacher_ID);
-Assign_to_ = (#house_name, #teacher_ID, points INT);
-Register_to_ = (#students_id_, #course_ID, grade VARCHAR(50));
+Houses = (H_name VARCHAR(50), H_motto VARCHAR(50), H_animal VARCHAR(50));
+Teachers = (T_ID INT, T_firstname VARCHAR(50), T_lastname VARCHAR(50));
+Students = (S_ID INT, S_firstname VARCHAR(50), S_lastname VARCHAR(50), #H_name);
+Courses = (C_ID VARCHAR(50), C_title VARCHAR(50), #T_ID);
+takes = (#S_ID, #C_ID, grade INT);
+assigns = (#H_name, #T_ID, points INT);

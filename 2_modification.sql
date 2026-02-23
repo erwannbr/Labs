@@ -57,3 +57,5 @@ CREATE TABLE assigns(
    FOREIGN KEY(H_name) REFERENCES Houses(H_name),
    FOREIGN KEY(T_ID) REFERENCES Teachers(T_ID)
 );
+
+ALTER table Houses drop foreign key Courses_ibfk_1;
